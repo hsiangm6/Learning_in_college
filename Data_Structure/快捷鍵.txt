@@ -1,0 +1,4 @@
+ctrl+alt+n: 執行(no debug)
+ctrl+c: stop
+f5:debug
+輸入終端機:cls:清除終端機
