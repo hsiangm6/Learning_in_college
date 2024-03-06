@@ -1,0 +1,3 @@
+讀取檔案(JS)相關網址:
+處理/讀取檔案不可或缺的FileReader: https://ithelp.ithome.com.tw/articles/10275062
+檔案處理 - 上傳前預覽: https://ithelp.ithome.com.tw/articles/10275986

@@ -1,0 +1,36 @@
+h1{
+    font-family: Georgia, serif;
+}
+h3{
+    text-decoration: underline;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+blockquote{
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+
+a:hover{
+    color:orange;
+}
+ol{
+    list-style-type: lower-alpha;
+}
+
+th{
+    text-align: left;
+    background-color: lightgray;
+}
+#email{
+    position:absolute;
+    left:180px;
+    top:250px;  
+}
+#button{
+    position:absolute;
+    left:180px;
+    top:265px;
+}

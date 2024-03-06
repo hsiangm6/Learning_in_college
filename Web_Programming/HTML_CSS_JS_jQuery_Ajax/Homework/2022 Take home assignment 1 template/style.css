@@ -1,0 +1,191 @@
+.whole{
+    width: 100%;
+    max-width: 1280px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4EFEA;
+    
+}
+.whole>div{
+    
+}
+
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row nowrap;
+}
+.header>img{
+    padding: 4.5px;   
+}
+
+
+.navbar {
+    background-color: #0B3C5D;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%;
+    max-height:59px; */
+}
+.navbar>div{
+    font-size: 20px;
+    line-height: 20px; /*屏除google預設的字體空間放大，讓字體是正確的20px (為了使高度是整數)*/
+    text-align:center;
+    font-weight: bold;
+    padding: 19.5px 15px;
+}
+.navbar>div:hover{
+    background-color: white;
+    color:#0B3C5D;
+}
+
+
+.focus_news {
+    
+    
+}
+.blueTitle{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #0B3C5D;
+    margin: 0px;
+    text-align: center;
+    padding: 25px 0px 10px;
+}
+.blueHr{
+    background-color: #0B3C5D;
+    height: 1px;
+    margin: 0px 20px;
+    border: 0px;
+    
+}
+.focus_news>div{ /*align block*/
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+}
+.focus_news>div>div{ /*partial block*/
+    border: 1px;
+    border-color: white;
+    background-color: white;
+    width: 390px;
+    margin: 10px 10px 20px;
+    
+}
+.focus_news>div>div:hover{ 
+    transform: scale(1.07);
+    transition: 0.5s
+}
+.focus_news>div>div>img{
+    width: 390px;
+    height: 222px;
+    
+    
+}
+.focus_news>div>div>p{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10.5px 0px;
+    
+}
+
+
+.program {
+    background-color: #0B3C5D;
+    
+}
+.beigeTitle{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #F4EFEA;
+    margin: 0px;
+    text-align: center;
+    padding: 20px 0px 10px;
+}
+.beigeHr{
+    background-color: #F4EFEA;
+    height: 1px;
+    margin: 0px 20px;
+    border: 0px;
+}
+.program > div{ /*align block*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 0px 28px;
+}
+.program>div>div{ /*partial block*/
+    font-size: 18px;
+    color:#0B3C5D;
+    width: 283px;
+    background-color: #F4EFEA;
+    border: 1px solid #F4EFEA;
+    margin:5px 10px;
+}
+.program>div>div:hover{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color:  #FFF5D6;
+    transition: 0.5s;
+    
+}
+.program>div>div:hover:first-line{
+    font-weight: bold;
+}
+.program>div>div>.department{
+    padding:16px 0px 6px 15px;
+    line-height: 18px;
+    margin: 0px;
+}
+.program>div>div>.class{
+    text-align: center;
+    padding: 6px 0px 16px 15px;
+    line-height: 18px;
+    margin: 0px;
+}
+.program>div>div>.space{
+    background-color:#0B3C5D;
+    height: 10px;
+}
+
+
+.edu_target {
+    
+}
+.edu_target .listTitle, ol, li{
+    margin: 10px 0px 0px 20px; 
+    font-size: 16px;
+    line-height: 16px;
+}
+.edu_target>ol{
+    padding-bottom: 25px;
+}
+.edu_target>.listTitle{
+    padding: 10px 0px 3px;
+}
+
+
+.footer {
+    background-color: #0B3C5D;
+    color: white;
+    padding: 10px 20px;
+
+}
+.footer>img{
+    height: 50px;
+}
+.footer>p{
+    font-size: 14px;
+    line-height: 14px;
+    margin: 10px 0px 0px;
+}
+
+
+

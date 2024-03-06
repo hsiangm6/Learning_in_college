@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elaine's Blog</title>
+    </head>
+    <body>
+        <h1><span>About Me</span></h1>
+        <p>
+            Hey! I'm <strong>Elaine</strong>. Coding has changed my world...
+        </p>
+        <!--如果你沒有包含任何bootstrap的樣式表，那麼該類可能不會做任何事情，
+            但如果你包含任何樣式，它肯定會使它被引用和斜體。
+            例如:<p 類 = “quote”>這是一個 quote</p> 將等效於 <q>這是一個 quote</q>-->
+        <p class="quote">Declare variables, no war</p>
+
+        <h1><span>My Skills</span></h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h1><span>My Coding Schedule </span></h1>
+        <table border="1">
+            <tr>
+                <th>Day</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td>8-8:30</td>
+                <!--You can use the classes to apply CSS to a given element/elements. 
+                    You can also use a class to select elements with Js.-->
+                <!--There is no effect if you just put class="selected"in html file only.
+                    You need to define "selected" class in style tag or css file.-->
+                <td class="selected">Learn</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9-10</td>
+                <td></td>
+                <td class="selected">Practice</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1-1:30</td>
+                <td></td>
+                <td></td>
+                <td class="selected">Play</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3:45-5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="selected">Code</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6-6:15</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="selected">Discuss</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h1><span>Contact Me</span></h1>
+        <form>
+            <input type="text" name="name" /><br />
+            <input type="email" name="email" /><br />
+            <!--textarea: support multiple lines of input -->
+            <textarea name="message"></textarea> <!--文字欄-->
+            <input type="submit" value="SEND" class="submit" /> <!--value=text on the button-->
+        </form>
+
+        <div class="section">
+            <h1><span>My Media</span></h1>
+            <iframe height="150" width="300"
+            src="https://www.youtube.com/embed/Q6_5InVJZ88"
+            allowfullscreen frameborder="0"></iframe>
+        </div>
+        <!--  -->
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

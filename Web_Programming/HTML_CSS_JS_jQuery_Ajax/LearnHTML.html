@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Learning</title> <!--標籤頁上的顯示-->
+        <meta   />
+    </head>
+    <body bgcolor="#FFFFFF">
+        <!--basic text-->
+            <!--This is a comment-->>
+            <h1>Basic Text</h1>
+            <h2>heading 2</h2>
+            <h3>heading 3</h3>
+            <h4>heading 4</h4>
+            <p>this is a line of text</p> 
+            <p>html特殊符號: 空格= &nbsp; 圈C=&copy; 圈R=&reg; 左尖括号=&lt; 右尖括号=&gt; 人民币符号=&yen;</p> 
+            <a href="https://blog.csdn.net/dream0129/article/details/79125624?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-79125624-blog-80847857.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-79125624-blog-80847857.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=2">
+                html數字外加圈
+            </a>
+
+            <!--Browsers automatically add an empty line before and after a paragraph.-->
+            <br />this is a line of text <!--  =<p>...</p>  -->
+            <p>This is <br /> a line break</p> <!--add a single line of text without starting a new paragraph-->
+            
+            <!--display with exactly the whitespace/line breaks given in the text. -->
+            <!--shown in a fixed-width font by default-->
+            <pre>
+Hello!
+    Start....
+ Try!!!!
+            </pre>
+
+            <!--a short section of computer code(usually shown in a fixed-width font)-->
+            <p>
+                take <code>out</code> more space <!--<code></code> take text out more space-->
+            </p>
+            
+            <hr> <!--horizontal line-->
+
+        <!--font(字體)--> 
+            <h1>Font</h1>
+            <p><b> bold text </b></p> <!--粗體文字-->
+            <p><big> big text</big></p>
+            <p><i>italic text</i></p> <!--斜體文字-->
+            <p><em>emphasis text</em></p> <!--斜體文字(The <em> tag is a phrase tag. It defines important text.)-->
+            <p><small>small text</small></p>
+            <p><strong>strong text</strong></p> <!--粗體文字(The <strong> tag is a phrase tag. It defines important text.)-->
+            <p><sub>subscripted text</sub></p> <!--下標文字-->
+            <p><sup>superscripted text</sup></p> <!--上標文字-->
+            <p><ins>inserted text</ins></p> <!--底線文字-->
+            <p><del>deleted text</del></p> <!--刪除線文字-->
+            <!--An element's width can be defined using pixels or percentages.-->
+            <hr width="150px" />
+            <hr width="50%" />
+            <hr>
+
+        <!--Attribute-->
+            <h1><span>Attribute</span></h1>
+            <p class="quote">"Declare variables, not war"</p>
+            <!--Attributes are always specified in the start tag, and they appear in name="value" pairs.-->
+            <p align="center">This text is aligned to center</p> 
+            <p align="center">"Attribute" Learning<br />
+                <hr width="10%" align="left" /> This is a text.
+            </p>
+            <p align="center">
+                This is another text.
+                <hr width="10%" align="left" /> 
+            </p>
+            <hr>
+
+        <!--image-->
+            <!--The alt attribute specifies an alternate text for an image.-->
+            <!--In case the image cannot be displayed, the alt attribute specifies an alternate text 
+                that describes the image in words. The alt attribute is required.-->
+            <!--Loading images takes time. Using large images can slow down your page, 
+                so use them with care.-->
+            <h1>Image</h1>
+            <img src="http://www.sololearn.com/images/tree.jpg" alt="" />
+            <img src="http://www.sololearn.com/images/tree.jpg" height="150px" width="150px" border="1px" alt="" /> <!--border=邊框-->
+            <img src="http://www.sololearn.com/images/tree.jpg" height="50%" width="50%" alt="" />
+            <hr>
+        
+        <!--List-->
+            <h1>List</h1>
+            <!--An ordered list starts with the <ol> tag, 
+                and each list item is defined by the <li> tag.-->
+            <!--The list items will be automatically marked with numbers.-->
+            <ol>
+                <li>Red</li>
+                <li>Blue</li>
+                <li>Green</li>
+            </ol>
+
+            <!--The list items will be marked with bullets.-->
+            <ul>
+                <li>Red</li>
+                    <ul>
+                        <li>Homer</li>
+                        <li>Marge</li>
+                    </ul>
+                <li>Family Guy:</li>
+                    <ol>
+                        <li>Peter</li>
+                        <li>Mark</li>
+                    </ol>
+                <li>Green</li>
+                <blockquote>   <!--使呈現字體如被按了tab鍵，往後退三格-->
+                    <p>make word back three space</p>
+                </blockquote>
+            </ul>
+            <hr>
+
+        <!--Table-->
+            <h1>Table</h1>
+            <!--Table data tags <td> act as data containers within the table.
+                They can contain all sorts of HTML elements, such as text, images, 
+                lists, other tables, and so on.-->
+            <!--The border attribute is not supported in HTML5.-->
+            <!--The text in <td> elements are regular and left-aligned by default.
+                The text in <th> elements are bold and centered by default. -->
+            <table border="1" align="center"> <!-- align=table position, border=table border-->
+                <caption>Learning Table</caption>  <!--table title-->
+                <tr>
+                    <th colspan="4">Table Header</th> <!--table colume header-->
+                </tr>
+                <tr> <!--table row-->
+                    <td>1-1</td> <!--table column(table data)-->
+                    <td bgcolor="red">1-2</td> <!-- bgcolor = background color -->
+                    <td>1-3</td>
+                    <td rowspan="2"> try rowspan</td>
+                </tr>
+                <tr>
+                    <td><br /></td> <!-- leave an empty form with 'br' in this column-->
+                    <!--colspan 屬性的功能是用來讓表格欄位（td）橫跨多列（columns），
+                        效果類似 Microsoft word 或 OpenOffice writer 中＂合併儲存格＂的效果，
+                        colspan 僅能用在 Table 的 td 標籤內，用於其他的標籤內無效。-->
+                    <td colspan="2"><br /></td>
+                </tr>
+            </table>
+            <hr>
+
+        <!--Link-->
+            <!--Links can be either absolute or relative.-->
+            <h1>Link</h1>
+            <a href="https://www.fooish.com/html/hyperlink-a-tag.html" target="_blank">Pages introducing hyperlink</a>
+            <hr>
+
+        
+        <!--Inline and Block Elements-->
+            <h1>Inline and Block Elements</h1>
+            <!--In HTML, most elements are defined as block level or inline elements.
+                Block level elements start from a new line.
+                For example: <h1>, <form>, <li>, <ol>, <ul>, <p>, <pre>, <table>, <div>, etc.-->
+            <!--Inline elements are normally displayed without line breaks.
+                For example: <b>, <a>, <strong>, <img>, <input>, <em>, <span>, etc.-->
+            <!--The <div> element is a block-level element that is often used as a container 
+                for other HTML elements.
+                When used together with some CSS styling, the <div> element can be used to 
+                style blocks of content-->
+            <div style="background-color:greenyellow; color:black; padding:20px;">
+                <!--color=text clor; padding=length-->
+                <p>test div attribute</p>
+            
+            </div>
+
+            <!--the <span> element is an inline element that is often used as a container 
+                for some text.
+                When used together with CSS, the <span> element can be used to 
+                style parts of the text-->
+            <h2>
+                Test <span style="color:red">"Span"</span> Attribute
+            </h2>
+            <!--Summary
+                The <div> element defines a block-level section in a document.
+                The <span> element defines an inline section in a document.-->
+            <hr>
+
+        <!--Form-->
+            <h1>Form</h1>
+            <!--HTML forms are used to collect information from the user.
+                Forms are defined using the <form> element, with its opening and closing tags-->
+            <form action="http://www.sololearn.com">
+                <!--Use the action attribute to point to a webpage that 
+                    will load after the user submits the form.-->
+                <!--Usually the form is submitted to a web page on a web server.-->
+                sololearn website
+            </form>
+
+            <!--The method attribute specifies the HTTP method (GET or POST) 
+                to be used when forms are submitted-->
+            <!--When you use GET, the form data will be visible in the page address.
+                Use POST if the form is updating data, or includes sensitive information (passwords).
+                POST offers better security because the submitted data is not visible in 
+                the page address.-->
+            <form action="url" method="GET"></form>
+            <form action="url" method="POST"></form>
+            
+            <!--輸入欄(input field)-->
+            <!--The <input> element has many variations, depending on the type attribute.
+                It can be a text, password, radio, URL, submit, etc.-->
+            <!--shows a form requesting a username and password-->
+            <form>
+                <!--The name attribute specifies a name for a form.-->
+                <!-- * The <input> tag has no end tag.-->
+                <input type="text" name="username" /><br />
+                <input type="password" name="password" />
+            </form>
+
+            <!--勾選欄(check box)-->
+            <!--If we change the input type to radio, it allows the user select 
+                only one of a number of choices-->
+            <form>
+                <!--multiple choice: select only one of a number of choices-->
+                <input type="radio" name="gender" value="male" />Male<br />
+                <input type="radio" name="gender" value="female" />Female<br />              
+            </form>
+            <form>
+                <!--multiple choice: allows the user to select more than one option-->
+                <input type="checkbox" name="gender" value="1" />Male<br/>
+                <input type="checkbox" name="gender" value="2" />Female<br/>
+            </form>
+
+            <!--按鍵式(button)-->
+            <!--The submit button submits a form to its action attribute-->
+            <form>
+                <input type="submit" value="Submit" /> <!--value=text on the button-->
+                <!--After the form is submitted, the data should be processed 
+                    on the server using a programming language, such as PHP.-->
+            </form>
+            <hr>
+        
+        <!--HTML Color-->
+            <h1><span>HTML Color</span></h1>
+            <!--HTML colors are expressed as hexadecimal values.
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F-->
+            <!--Colors are displayed in combinations of red, green, and blue light (RGB).
+                Hex values are written using the hashtag symbol (#), 
+                followed by either three or six hex characters.-->
+            <!--RGB color values are supported in all browsers.-->
+            <!--color value in onenote-->
+            
+            <!--background and font color-->
+            <!--background: see the sixth row-->
+            <h2>
+                <font color="#00FF00">Green Headline</font>
+            </h2>
+            <hr>
+
+    </body>
+    <!--Frame-->
+    <h1><span>Frame</span></h1>
+    <!--A page can be divided into frames using a special frame document.-->
+    <!--The <frame> tag defines one specific window (frame) within a <frameset>. 
+        Each <frame> in a <frameset> can have different attributes, such as border, 
+        scrolling, the ability to resize, etc.-->
+    <!--The <frameset> element specifies the number of columns or rows in the frameset, 
+        as well as what percentage or number of pixels of space each of them occupies.-->
+    <!-- * The <frameset> tag is not supported in HTML5.-->
+    <frameset cols="100, 25%, *"></frameset> <!--Horizontal split-->
+    <frameset rows="100, 25%, *"></frameset> <!--vertical split-->
+    <!--Use the <noresize> attribute to specify that a user cannot resize a <frame> element-->
+    <frame noresize="noresize"></frame>
+    <!--Frame content should be defined using the src attribute.-->
+    <!-- the <noframes> element provides a way for browsers that do not support 
+        frames to view the page. The element can contain an alternative page, 
+        complete with a body tag and any other elements.-->
+    <frameset cols="25%, 50%, 25%">
+        <frame src="a.htm" />
+        <frame src="b.htm" />
+        <frame src="c.htm" />
+        
+    </frameset>
+    
+    <!-- <noframes>Frames not supported!</noframes> -->
+
+</html>
