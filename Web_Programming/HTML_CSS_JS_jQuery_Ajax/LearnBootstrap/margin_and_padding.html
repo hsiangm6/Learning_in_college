@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous">
+
+        <title>Shared Items: margin and padding</title>
+        <style type="text/css">
+        .box{
+            height:300px;
+            background-color: #aaa;
+        }
+        .txt{
+            background-color: #ffa;
+        }
+        @media screen and (min-width: 768px) { /*在md以上的裝置才會有的設定*/
+            .pic-card .col-12:last-child{ /*交錯圖片的位置設定*/
+                margin-top: -50px;
+            }
+        }
+            
+    </style>
+    </head>
+    <body>
+        <!--Utilities-spacing(https://getbootstrap.com/docs/5.2/utilities/spacing/)-->
+        <div class="box w-25 mx-auto"></div> <!--mx-auto:上下左右置中-->
+        <hr>
+        <!--交錯圖片-->
+        <div class="container pic-card">
+            <div class="row">
+                <div class="col-12 col-md-7 mb-2 mb-md-0"> <!--mb: margin-bottom-->
+                    <div class="pic">
+                        <img
+                            src="https://media.zenfs.com/zh-tw/newtalk.tw/7f9c7113d0ac23f4d67aa1ab09e4245e"
+                            class="w-100 img-thumbnail" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 ms-auto">
+                    <!--margin-start(左邊margin): auto-->
+                    <!--text-block:用來在header裡的style裡設定css，使兩column重疊-->
+                    <div class="txt p-4">
+                        <h2>card</h2>
+                        <p>try try try try</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- JavaScript Bundle with Popper -->
+        <!--bundle(代表是由多個js合再一起的)-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

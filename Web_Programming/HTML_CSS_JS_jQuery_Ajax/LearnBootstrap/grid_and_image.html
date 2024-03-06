@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous">
+        <style type="text/css">
+        .text img{
+            width:100%;
+        }
+        .kv{
+            width:100%;
+            /* height:98vh; */
+            background-image: url(https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp);
+            background-size:cover;
+        }
+        .kv text{
+            text-align: center;
+        }
+        .txt{
+            background-color: #ccc;
+            padding: 20px;
+        }
+        @media screen and (min-width: 760px){ /*使text-block只有在平板以上才會生效*/
+            .text-block{
+            margin-top: -100px;
+        }
+        }
+        
+    </style>
+    </head>
+
+    <body>
+        <button class="btn btn-primary">Click me</button>
+        <a href="https://www.nsysu.edu.tw" target="_blank">中山大學</a>
+        <!--target="_blank": 連進去後跳出新分頁-->
+
+
+        <!--Layout-Grid (格線系統:預設將寬度分割成12欄)-->
+        <div class="container"> <!--詳細介紹在layout的containers-->
+            <!--container(定寬容器:有固定寬度，在不同的裝置下有不同的寬度)，如果不想要定寬，可以用container-fluid(滿版)-->
+            <!--控制欄間距(控制左右padding):在row裡寫 g-(寬度) -->
+            <!--控制行間距(控制上下padding):在col裡寫 md-(寬度)-->
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 col-xxl-2">
+                    <!--在手機上是占12欄，在平板以上尺寸裝置占3欄(md:中型尺寸)-->
+                    <!--也可以只寫col，系統會自動分欄-->
+                    <!--想使用自動欄寬，又想在不同裝置上做出區別，可以在row上處理: class="row row-cols-md-3 row-cols-lg-4 row-cols-xl-6"-->
+                    <!--按照上一行的的寫法，就不必在每個col裡都寫一遍，在不同裝置下的做法-->
+                    <!--sm:手機的橫向, md:平板的直向, lg:平板的橫向 ,xl:桌機 (尺寸取決於裝置解析度。在layout裡的breakpoint可以看到詳細介紹)-->
+                    <div class="text">
+                        <img
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <!--在img裡直接加class="w-100"，代表寬度100%，就不必在header打css style-->
+                        <p>Hello! This is Hsinchu.
+                            qewrwqfsdfsadfsdfsd
+                            sdfasfafawfsdsfasdcsd
+                            fsdfsdafsafsaffaer
+                            htgfsdgsges</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xxl-2">
+                    <!--在手機上是占12欄，在平板以上尺寸裝置占3欄(md:中型尺寸)-->
+                    <div class="text">
+                        <img
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <p>Hello! This is Hsinchu.
+                            qewrwqfsdfsadfsdfsd
+                            sdfasfafawfsdsfasdcsd
+                            fsdfsdafsafsaffaer
+                            htgfsdgsges</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xxl-2">
+                    <!--在手機上是占12欄，在平板以上尺寸裝置占3欄(md:中型尺寸)-->
+                    <div class="text">
+                        <img
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <p>Hello! This is Hsinchu.
+                            qewrwqfsdfsadfsdfsd
+                            sdfasfafawfsdsfasdcsd
+                            fsdfsdafsafsaffaer
+                            htgfsdgsges</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xxl-2">
+                    <!--在手機上是占12欄，在平板以上尺寸裝置占3欄(md:中型尺寸)-->
+                    <div class="text">
+                        <img
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <p>Hello! This is Hsinchu.
+                            qewrwqfsdfsadfsdfsd
+                            sdfasfafawfsdsfasdcsd
+                            fsdfsdafsafsaffaer
+                            htgfsdgsges</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xxl-2">
+                    <!--在手機上是占12欄，在平板以上尺寸裝置占3欄(md:中型尺寸)-->
+                    <div class="text">
+                        <img
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <p>Hello! This is Hsinchu.
+                            qewrwqfsdfsadfsdfsd
+                            sdfasfafawfsdsfasdcsd
+                            fsdfsdafsafsaffaer
+                            htgfsdgsges</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xxl-2">
+                    <!--在手機上是占12欄，在平板以上尺寸裝置占3欄(md:中型尺寸)-->
+                    <div class="text">
+                        <img
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <p>Hello! This is Hsinchu.
+                            qewrwqfsdfsadfsdfsd
+                            sdfasfafawfsdsfasdcsd
+                            fsdfsdafsafsaffaer
+                            htgfsdgsges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--格線的分布與對齊-->
+        <!--Utilities-Flex-Order(排序)-->
+        <div class="container">
+            <div class="row justify-content-center">
+                <!--center: 使區塊置中, start:使區塊置左, end: 使區塊靠右, between: 使剩餘空間分布在圖片的兩側且置左, around: 使剩餘空間分布在圖片的兩側且置中-->
+                <div class="col-12 col-md-3 order-last order-md-3">
+                    <!--order-last:使區塊排到最後面-->
+                    <div class="item">
+                        <img class='w-100'
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <h3>A title</h3>
+                        <p>Lorem teemvoijfsijdvdsif</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 order-1 order-md-2">
+                    <!--order-1:使區塊排到第1個位置-->
+                    <div class="item">
+                        <img class='w-100'
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <h3>B title</h3>
+                        <p>Lorem teemvoijfsijdvdsif</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 order-md-1">
+                    <!--order-md-1:在md裝置才是排在第一個位置-->
+                    <div class="item">
+                        <img class='w-100'
+                            src="https://image.photocnc.com/aoaodcom/2021-04/05/2021040508175165058b23836f89188b2a0d22ceb6a7a9.jpg.h700.webp"/>
+                        <h3>C title</h3>
+                        <p>Lorem teemvoijfsijdvdsif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--整個版面背景和置中文字-->
+        <div class="kv"> <!--設定在header裡的style-->
+            <div class="container h-100"> <!-- h-100: 高度100%-->
+                <div class="row justify-content-center align-items-center
+                    h-100">
+                    <div class="col-8 col-md-6">
+                        <div class="text">
+                            <h1>Try to learn Bootstrap</h1>
+                            <p>Lorem ipsum, dolor
+                                sit amet consectetur,
+                                adipidicim elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--格線距離控制: layout-columns-offset-->
+        <!--圖片與寬高尺寸控制: content-images, content-figures-->
+        <!--class="image-fluid": 圖片滿版(max-width: 100%:最大不會超過圖片的原始寬度)(w-100:width-100%: 圖片填滿block的寬度)-->
+        <!--class="image-thumbnail": 邊框線+一點內部距離-->
+        <!--class="vm-100: 視窗寬度100%, class="vh-100": 視窗高度100%-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-2">
+                    <div class="item">
+                        <img src="https://img.linetv.tw/large/drama/10438-p.png"
+                            class="w-100" />
+                        <h3>格線距離控制</h3>
+                        <p>hello! hello hello!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 offset-md-3"> <!--offset-md-3: md裝置，左端間距占3欄-->
+                    <div class="item">
+                        <img src="https://img.linetv.tw/large/drama/10438-p.png"
+                            class="w-100" />
+                        <h3>格線距離控制</h3>
+                        <p>hello! hello hello!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 offset-md-3"> <!--offset-md-3: md裝置，左端間距占3欄-->
+                    <div class="item">
+                        <img src="https://img.linetv.tw/large/drama/10438-p.png"
+                            class="w-100" />
+                        <h3>格線距離控制</h3>
+                        <p>hello! hello hello!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <div class="pic">
+                        <img
+                            src="https://media.zenfs.com/zh-tw/newtalk.tw/7f9c7113d0ac23f4d67aa1ab09e4245e"
+                            class="w-100" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 offset-md-3 text-block">
+                    <!--text-block:用來在header裡的style裡設定css，使兩column重疊-->
+                    <div class="txt">
+                        <h2>block 重疊</h2>
+                        <p>try try try try</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-7 mt-5 offset-5"> <!--mt:margin-top -->
+                    <div class="pic">
+                        <img
+                            src="https://media.zenfs.com/zh-tw/newtalk.tw/7f9c7113d0ac23f4d67aa1ab09e4245e"
+                            class="w-100" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 text-block">
+                    <!--text-block:用來在header裡的style裡設定css，使兩column重疊-->
+                    <div class="txt">
+                        <h2>block 重疊</h2>
+                        <p>try try try try</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <div class="img_size">
+                        <hr>
+                        <img
+                            src="https://p2.bahamut.com.tw/S/2KU/22/008433ecc47b2a2b847bb49d0b1iumq5.JPG"
+                            class="img-fluid" /> <!--256*256-->
+                        <h3>image fluid</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="img_size">
+                        <hr>
+                        <img
+                            src="https://p2.bahamut.com.tw/S/2KU/22/008433ecc47b2a2b847bb49d0b1iumq5.JPG"
+                            class="img-thumbnail" /> <!--256*256-->
+                        <h3>image fluid</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <figure class="figure"> <!--figure是一個獨立區塊，區塊裡的東西會獨立解讀-->
+            <img
+                src="https://p2.bahamut.com.tw/S/2KU/22/008433ecc47b2a2b847bb49d0b1iumq5.JPG"
+                class="figure-img img-thumbnail"/> <!--256*256-->
+            <figcation class="figcaption"> <!--figcaption: 解析描述內容的圖片是什麼東西-->
+                <p>figure block</p>
+            </figcation>
+        </figure>
+
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <!--bundle(代表是由多個js合再一起的)-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

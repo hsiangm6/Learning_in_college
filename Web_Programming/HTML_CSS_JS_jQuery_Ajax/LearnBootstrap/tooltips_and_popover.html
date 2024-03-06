@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tooltips and popover message</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <!--components-toolips、popovers (JS組件)-->
+        <h1>hello world!</h1>
+
+        <!--toolips: hover後會提示是甚麼工具-->
+        <!--Direction(測試時不要選toolips on top/left，因為按鈕內沒東西，測試時按鈕會跑到視窗外，看不到按鈕)-->
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+            data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+            <!--data-bs-placement就是提示欄顯示的位置，data-bs-title:提示欄顯示的內容-->
+            Tooltip on bottom
+        </button>
+
+        <!--popovers: 點擊後會提示是甚麼工具-->
+        <button type="button" class="btn btn-lg btn-danger"
+            data-bs-toggle="popover" data-bs-title="Popover title"
+            data-bs-content="detailed content">Click to toggle popover</button>
+        <!--data-bs-title: 標題, data-bs-content: 內容-->
+
+
+
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <!--bundle(代表是由多個js合再一起的)-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+
+        <script> //啟用toolips(需要JS啟用) (enable toolips)(因為所有的JS都依靠bs的js，所以一定要放置在bs的js下方，否則沒有反應)
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            //啟用popover
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+            const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        </script>
+    </body>
+</html>
