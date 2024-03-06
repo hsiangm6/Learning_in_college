@@ -1,0 +1,93 @@
+.tbl {
+    background-color:aqua;
+    font-weight:bold;
+}
+.header {
+    color: blue;
+    font-size:x-large;
+}
+.red { 
+    color:red; 
+    font-weight: bold;
+}
+div#traversal {
+    padding: 10px;
+}
+p#traversal{
+    border: 1px solid black;
+    padding: 5px;
+}
+img{
+    width: 70%;
+}
+#msg {
+    color: blue;
+    font-size: 16pt;
+    font-weight: bold;
+}
+h1 {
+    color: #1abc9c;
+}
+.rem {
+    margin-left: 5px;
+    background-color: white;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+p.hide-show, p.fade-animation, p.sliding-animation {
+    background-color:grey;
+    text-align:center;
+    color:white;
+    padding:5px;
+    margin-top: 10px;
+    cursor:pointer;
+}
+div.hide-show, div.fade-animation, div.sliding-animation {
+    background-color:grey;
+    color:white;
+}
+div#animation-quene-area{
+    margin:10px;
+    height:300px;
+    width:200px;
+}
+div#animation-quene{
+    background:orange;
+    height:80px;width:80px;
+    position:absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+#item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+#item:hover, #item:focus {
+    background-color: #3e8e41;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+    /*inline-block: https://ytclion.medium.com/css%E6%95%99%E5%AD%B8-%E9%97%9C%E6%96%BCdisplay-inline-inline-block-block%E7%9A%84%E5%B7%AE%E5%88%A5-1034f38eda82 */
+}
+#submenu {
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#submenu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#submenu a:hover {
+    background-color: #4CAF50
+}
