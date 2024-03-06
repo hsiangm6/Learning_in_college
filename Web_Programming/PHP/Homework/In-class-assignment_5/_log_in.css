@@ -1,0 +1,13 @@
+.log_in{
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    border: 1px solid black;
+    padding: 20px 10px;
+}
+input{
+    margin: 5px 0px;
+}
+.incorrect{
+    color: red;
+}
