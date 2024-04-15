@@ -1,0 +1,97 @@
+<!--危湘妤、盧子涵-->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+
+    // set the dimensions and margins of the graph
+    const margin = {top: 10, right: 30, bottom: 30, left: 60},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    const svg = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            `translate(${margin.left}, ${margin.top})`);
+
+    //Read the data
+    d3.csv("./data3.csv").then(function(data) {
+
+        // Add X axis
+        const x = d3.scaleLinear()
+            .domain([0, 200])
+            .range([ 0, width ]);
+        svg.append("g")
+            .attr("transform", `translate(0, ${height})`)
+            .call(d3.axisBottom(x));
+
+        // Add Y axis
+        const y = d3.scaleLinear()
+            .domain([0, 40])
+            .range([ height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        // Color scale: give me a specie name, I return a color
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        // Add draggable variable
+        let drag = d3.drag()
+            .on("drag", dragged)
+
+        // Add function of draggable dots
+        function dragged(event) {
+            let current = d3.select(this);
+            current
+                .attr('cx', event.x)
+                .attr('cy', event.y);
+        }
+
+
+
+        // Add dots
+        const dots = svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .join("circle")
+            .attr("cx", function (d) { return x(d.time); } )
+            .attr("cy", function (d) { return y(d.temperature); } )
+            .attr("r", 5)
+            .style("fill", function (d) { return color(d.section) } )
+            .attr("opacity", 0.5)
+            .call(drag);
+
+        dots.on("mouseover", (event, d) => {
+            d3.select(event.currentTarget)
+                .attr("opacity",function(d) { return 1})
+                .attr("r", 10);
+        });
+        dots.on("mouseout", (event, d) => {
+            d3.select(event.currentTarget)
+                .attr("opacity",function(d) { return 0.5})
+                .attr("r", 5);
+        });
+
+        dots.on("dblclick", (event, d) => {
+            d3.select(event.currentTarget)
+                .transition()
+                .duration(500)
+                .attr("opacity",function(d) { return 0})
+                .attr("r", 0)
+                .attr
+        });
+
+
+
+    })
+</script>
