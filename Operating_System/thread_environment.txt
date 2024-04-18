@@ -1,0 +1,3 @@
+if use thread, please code "-std=c++11" in compiler option.
+And, your mingw is set to "mingw64-posix": teaching web: https://blog.csdn.net/liunan199481/article/details/82899959
+    route: File>Settings>Build, Execution, Deployment>Toolchains

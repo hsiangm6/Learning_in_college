@@ -1,0 +1,7 @@
+# ninja log v5
+0	1023	7350504848459248	CMakeFiles/Operating_System.dir/thread_programming.cpp.obj	b0f49b06de585dcd
+1027	1245	7350504850613104	Operating_System.exe	9561c2b4f007dbd5
+3	851	7350507556837034	CMakeFiles/Operating_System.dir/thread_programming.cpp.obj	b0f49b06de585dcd
+851	994	7350507558231975	Operating_System.exe	9561c2b4f007dbd5
+4	1801	7350511740503492	CMakeFiles/Operating_System.dir/thread_programming.cpp.obj	b0f49b06de585dcd
+1803	1923	7350511741643478	Operating_System.exe	9561c2b4f007dbd5

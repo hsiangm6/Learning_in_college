@@ -1,0 +1,116 @@
+<!--危湘妤、盧子涵-->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+<div id="selected_cities"></div>
+<script>
+
+    // set the dimensions and margins of the graph
+    const margin = {top: 30, right: 30, bottom: 70, left: 60},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+    // append the svg object to the graph
+    const svg = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const labelGroup = d3.select("#selected_cities")
+        .append("div")
+        .attr("transform", `translate(${margin.left},${margin.top})`); // 選擇已經創建的容器
+
+
+    // Parse the Data
+    d3.csv("./data1.csv").then( function(data) {
+
+        // X axis
+        const x = d3.scaleBand()
+            .range([ 0, width ])
+            .domain(data.map(d => d.city))
+            .padding(0.2);
+        svg.append("g")
+            .attr("transform", `translate(0, ${height})`)
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .attr("transform", "translate(-10,0)rotate(-45)")
+            .style("text-anchor", "end");
+
+        // Add Y axis
+        const y = d3.scaleLinear()
+            .domain([0, 1000])
+            .range([ height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        // Bars
+        const bar = svg.selectAll("mybar")
+            .data(data)
+            .join("rect")
+            .attr("x", d => x(d.city))
+            .attr("y", d => y(d.profit))
+            .attr("width", x.bandwidth())
+            .attr("height", d => height - y(d.profit))
+            .attr("fill", "#69b3a2")
+
+        // Create the brush behavior.
+        // .on("start brush end", ...) 是指定當刷選開始、進行中和結束時要執行的回調函式
+        svg.call(d3.brush().on("start brush end", ({selection}) => {
+            // 創建一個空陣列 value，用於存儲刷選器選擇的數據
+            let value = [];
+            // if (selection) { ... }: 檢查是否有選擇區域
+            if (selection) {
+                const [[x0, y0], [x1, y1]] = selection;
+                // value = bar ...: 選擇所有 .bar 元素，並根據刷選區域過濾出符合條件的元素。
+                //      對於符合條件的元素，將其顏色設置為橙色，並將其數據添加到 value 陣列中。
+                value = bar
+                    .style("fill", "#69b3a2")
+                    .filter(d => x(d.city)+x.bandwidth() >= x0
+                        && x(d.city) <= x0 + (x1-x0)
+                        && y(d.profit) + (height - y(d.profit)) >= y0
+                        && y(d.profit) <= y0 + (y1-y0))
+                    .style("fill", "orange")
+                    .data();
+                // console.log(value);
+
+                // 將被選擇的城市顯示在圖表下方
+                // 獲取被刷選的條形圖的 x 軸標籤
+                const selectedLabels = value.map(d => d.city);
+                console.log("value:", value)
+                console.log("selectedLabels: ", selectedLabels)
+                d3.selectAll(".selected-cities")
+                    .remove(); // 先移除現有的
+
+                selectedLabels.forEach((city, i) => {
+                    labelGroup.append("p")
+                        .attr("class", "selected-cities")
+                        .style("margin-left", margin.left + "px")
+                        .style("margin-top", 0 + "px")
+                        .style("margin-bottom", 5 + "px")
+                        .text(city)
+                        .style("text-anchor", "start");
+                });
+
+            } else {
+                bar.style("fill", "#69b3a2");
+                d3.selectAll(".selected-cities")
+                    .remove(); // 移除已選擇的城市文本
+            }
+
+            // Inform downstream cells that the selection has changed.
+            // 刷選器所選擇的數據存儲到 SVG 元素的屬性中，並通過觸發 "input" 事件來通知其他元素或程序刷選已更改。
+            //      這樣可以實現將刷選器的選擇數據傳遞給後續的處理流程或其他程序的功能
+            svg.property("value", value).dispatch("input");
+            // console.log("after: ", value);
+
+        }));
+
+    })
+</script>

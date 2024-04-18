@@ -1,0 +1,2 @@
+teaching web:
+https://blog.jetbrains.com/clion/2022/11/clion-2022-3-eap-compile-and-run-for-single-files-and-a-new-ui/
