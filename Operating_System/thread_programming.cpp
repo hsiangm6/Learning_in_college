@@ -42,7 +42,9 @@ void calculate_min(const std::vector<int>& numbers) {
 void calculate_max(const std::vector<int>& numbers) {
     max_value = *max_element(numbers.begin(), numbers.end());
 }
-
+//在CLion要執行的話，除了在CMakeLists.txt要做更動
+//      ，Debug裡的Run Configurations也要編輯
+//      在program arguments要加上測試argv= 90 81 78 95 79 72 85
 // argc 表示命令行傳遞給程序的參數數量，即參數個數
 // argv 是一個字符串陣列（char*），存儲命令行傳遞給程序的參數。
 //      argv[0] 是程序本身的名稱，後續元素包含命令行參數。

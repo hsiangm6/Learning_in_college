@@ -4,4 +4,4 @@ project(Operating_System)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Operating_System
-        thread_programming.cpp)
+        banker_algorithm.cpp)
